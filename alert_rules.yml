@@ -1,0 +1,13 @@
+groups:
+  - name: node_disk_read_latency
+    rules:
+      - alert: node_disk_read_latency_alert
+        expr: node_disk_read_latency_rule > 0.1
+        for: 1m
+        annotations:
+          summary: "disk read latency in  {{ $labels.instance }}"
+          description: "disk read latency in {{ $value }} "
+
+
+
+

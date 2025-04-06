@@ -1,0 +1,19 @@
+
+groups:
+  - name: node_disk_read_latency
+    rules:
+      - record: node_disk_read_latency_rule
+        expr: rate(node_disk_read_time_second_total[1m]) / rate(node_disk_reads_completed_total[1m])
+        labels:
+          node1: node_disk_read_latency
+
+            # node_disk_read_time_second_total : total time  spent on disk read operations
+            # node_disk_reads_completed_total  : total number of disk read operations
+
+
+
+
+
+
+
+
